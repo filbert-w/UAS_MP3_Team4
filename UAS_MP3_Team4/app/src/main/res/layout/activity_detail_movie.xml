@@ -25,14 +25,21 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/tv_tahun"
-        android:text="ini judul"
+        android:text="ini tahun"
         />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/tv_tglrilis"
-        android:text="ini judul"
+        android:text="ini tanggal rilis"
+        />
+
+    <Button
+        android:id="@+id/button_add_to_favorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add to My Favorite"
         />
 
 </LinearLayout>

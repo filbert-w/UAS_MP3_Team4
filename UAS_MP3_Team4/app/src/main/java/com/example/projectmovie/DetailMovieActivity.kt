@@ -2,6 +2,7 @@ package com.example.projectmovie
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import com.bumptech.glide.Glide
 import com.example.projectmovie.databinding.ActivityDetailMovieBinding
 import com.example.projectmovie.databinding.ActivityMainBinding
@@ -38,5 +39,10 @@ class DetailMovieActivity : AppCompatActivity() {
 
             }
         })
+
+        val button : Button = findViewById(R.id.button_add_to_favorite)
+        button.setOnClickListener(){
+            //menambahkan film ke favorite
+        }
     }
 }
