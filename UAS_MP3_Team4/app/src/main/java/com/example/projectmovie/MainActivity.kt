@@ -37,7 +37,6 @@ class MainActivity : AppCompatActivity() {
                     replaceFragment(FavoriteFragment())
                     val l_layout : LinearLayout = findViewById(R.id.ly_input)
                     l_layout.visibility = GONE
-//                    showFavoriteFragment()
                 }
 
                 else ->{
@@ -70,24 +69,5 @@ class MainActivity : AppCompatActivity() {
         mFragment.arguments = mBundle
 
         mFragmentTransaction.replace(R.id.fl_data,mFragment).commit()
-    }
-
-    private fun showFavoriteFragment() {
-        val mFragmentManager = supportFragmentManager
-        val mFragmentTransaction = mFragmentManager.beginTransaction()
-        val mFragment = DataFragment()
-
-//        val applicationScope = CoroutineScope(SupervisorJob())
-//
-//        val database by lazy { MovieRoomDatabase.getDatabase(this, applicationScope) }
-//        val repository by lazy { MovieRepository(database.movieDao()) }
-
-
-        val textCari = binding.etCari.text
-        val mBundle = Bundle()
-        mBundle.putString("carimovie", textCari.toString())
-        mFragment.arguments = mBundle
-
-//        mFragmentTransaction.replace(R.id.fl_favorite,mFragment).commit()
     }
 }
