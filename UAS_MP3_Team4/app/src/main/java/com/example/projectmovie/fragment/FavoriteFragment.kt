@@ -1,10 +1,13 @@
 package com.example.projectmovie.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import com.example.projectmovie.FavoriteActivity
 import com.example.projectmovie.R
 
 // TODO: Rename parameter arguments, choose names that match
@@ -35,7 +38,15 @@ class FavoriteFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_favorite, container, false)
+        val view:View = inflater.inflate(R.layout.fragment_favorite, container, false)
+
+        val btnOpen:Button = view.findViewById<Button>(R.id.btn_see_favorite)
+        btnOpen.setOnClickListener{
+            val intent = Intent(getActivity(), FavoriteActivity::class.java)
+            getActivity()?.startActivity(intent)
+        }
+
+        return view
     }
 
     companion object {
